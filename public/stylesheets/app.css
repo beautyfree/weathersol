@@ -1,0 +1,17 @@
+#container {
+    margin: 0 auto;
+    width: 900px;
+}
+
+    #preview {
+        margin-right: 240px;
+    }
+        #preview textarea {
+            width: 100%;
+            height: 100px;
+        }
+
+    #sidebar {
+        float: right;
+        width: 200px;
+    }
