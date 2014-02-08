@@ -2,7 +2,7 @@
 
     function WEATHER(){
         var t = this;
-        // Инициируем процесс создания виджета
+        // Иницилируем процесс создания виджета
         t.widget = function(ci_id, da_type, di_type){
             if(ci_id == undefined) return;
             da_type = da_type || 1;
@@ -52,11 +52,20 @@
                 scrolling: 'no',
                 style:{
                     padding: 0
-                },
-                src: 'http://localhost:3000/widget/?id='+ci_id+'&days='+da_type+'&direction='+di_type
+                }
             });
 
+            this.transport(widget, ci_id, da_type, di_type);
+
             this.replace(placeholder, widget);
+        },
+        transport: function(widget, ci_id, da_type, di_type) {
+            var host = window.location.host != 'localhost:3000' ?
+                'weathersol.herokuapp.com/' :
+                'localhost:3000';
+
+            widget.src = 'http://'+host+'/widget/?id='+ci_id+'&days='+da_type+'&direction='+di_type;
+            return widget;
         }
     }
 
