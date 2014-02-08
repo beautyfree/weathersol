@@ -46,10 +46,10 @@
 
             var widget = this.c('iframe', {
                 id: 'weather_widget',
-                class: 'weather_direction_'+di_type,
-                width: '100%',
                 frameBorder: 0,
                 scrolling: 'no',
+                height: di_type == 1 ? 114 : da_type * 114, // Выставляем высоту, 90px один блок с погодой
+                width: di_type == 1 ? da_type * 45 : 45, // Выставляем высоту, 90px один блок с погодой
                 style:{
                     padding: 0
                 }
@@ -60,8 +60,8 @@
             this.replace(placeholder, widget);
         },
         transport: function(widget, ci_id, da_type, di_type) {
-            var host = window.location.host != 'localhost:3000' ?
-                'weathersol.herokuapp.com/' :
+            var host = w.location.host != 'localhost:3000' ?
+                'weathersol.herokuapp.com' :
                 'localhost:3000';
 
             widget.src = 'http://'+host+'/widget/?id='+ci_id+'&days='+da_type+'&direction='+di_type;

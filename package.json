@@ -19,7 +19,7 @@
     "main": "server.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/beautyfree/weather"
+        "url": "https://github.com/beautyfree/weathersol"
     },
     "keywords": [
         "weather",
@@ -28,6 +28,6 @@
     "author": "Alexey Elizarov (beauty_free)",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/beautyfree/weather/issues"
+        "url": "https://github.com/beautyfree/weathersol/issues"
     }
 }

@@ -1,0 +1,307 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#result_widget {
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+#result_widget ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#result_widget ul li {
+    float: left;
+    width: 45px;
+    height: 114px;
+}
+#result_widget.direction_1 ul li {
+    float: left;
+}
+#result_widget.direction_2 ul li {
+    float: none;
+}
+
+
+#result_widget .top {
+    padding: 4px 0px 5px;
+    height: 15px;
+    background-color: #fff;
+}
+#result_widget .middle {
+    height: 67px;
+}
+#result_widget .tday {
+    font-size: 16px;
+    padding: 7px 0px 2px;
+}
+#result_widget .tnight {
+    font-size: 11px;
+    padding: 4px 0px 5px;
+    color: #6D6E6E;
+    height: 15px;
+}
+
+#result_widget .p_block {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#result_widget img {
+    margin-top: 5px;
+}
+
+
+
+/**
+ * Цвет в зависимости от температуры
+ */
+.bg_-60,
+.bg_-59{
+    background-color:#519fdd
+}
+
+.bg_-58,
+.bg_-57{
+    background-color:#56a2dd
+}
+
+.bg_-56,
+.bg_-55{
+    background-color:#5ba5de
+}
+
+.bg_-54,
+.bg_-55{
+    background-color:#60a7de
+}
+
+.bg_-52{
+    background-color:#66aadf
+}
+
+.bg_-50{
+    background-color:#6bade0
+}
+
+.bg_-48{
+    background-color:#70afe0
+}
+
+.bg_-46{
+    background-color:#76b2e1
+}
+
+.bg_-44{
+    background-color:#7bb5e2
+}
+
+.bg_-42{
+    background-color:#80b7e2
+}
+
+.bg_-40{
+    background-color:#86bae3
+}
+
+.bg_-38{
+    background-color:#8bbde3
+}
+
+.bg_-36{
+    background-color:#90bfe4
+}
+
+.bg_-34{
+    background-color:#95c2e5
+}
+
+.bg_-32{
+    background-color:#9bc5e5
+}
+
+.bg_-30{
+    background-color:#a0c7e6
+}
+
+.bg_-28{
+    background-color:#a0c7e6
+}
+
+.bg_-26{
+    background-color:#abcde7
+}
+
+.bg_-24{
+    background-color:#b0cfe8
+}
+
+.bg_-22{
+    background-color:#b5d2e9
+}
+
+.bg_-20{
+    background-color:#bbd5e9
+}
+
+.bg_-18{
+    background-color:#c0d7ea
+}
+
+.bg_-16{
+    background-color:#c5daea
+}
+
+.bg_-14{
+    background-color:#caddeb
+}
+
+.bg_-12{
+    background-color:#d0dfec
+}
+
+.bg_-10{
+    background-color:#d5e2ec
+}
+
+.bg_-8{
+    background-color:#dae5ed
+}
+
+.bg_-6{
+    background-color:#e0e7ee
+}
+
+.bg_-4{
+    background-color:#e5eaee
+}
+
+.bg_-2{
+    background-color:#eaedef
+}
+
+.bg_0{
+    background-color:#f0eff0
+}
+
+.bg_2{
+    background-color:#f0f0ec
+}
+
+.bg_4{
+    background-color:#f1f0e9
+}
+
+.bg_6{
+    background-color:#f2f0e6
+}
+
+.bg_8{
+    background-color:#f3f1e3
+}
+
+.bg_10{
+    background-color:#f4f1e0
+}
+
+.bg_12{
+    background-color:#f5f2dc
+}
+
+.bg_14{
+    background-color:#f5f2d9
+}
+
+.bg_16{
+    background-color:#f6f3d6
+}
+
+.bg_18{
+    background-color:#f7f3d3
+}
+
+.bg_20{
+    background-color:#f8f4d0
+}
+
+.bg_22{
+    background-color:#f8f1c8
+}
+
+.bg_24{
+    background-color:#f9eec0
+}
+
+.bg_26{
+    background-color:#f9ebb9
+}
+
+.bg_28{
+    background-color:#f9e8b1
+}
+
+.bg_30{
+    background-color:#fae5aa
+}
+
+.bg_32{
+    background-color:#fae3a3
+}
+
+.bg_34{
+    background-color:#fae09c
+}
+
+.bg_36{
+    background-color:#fbde96
+}
+
+.bg_38{
+    background-color:#fbdb8f
+}
+
+.bg_40{
+    background-color:#fbd988
+}
+
+.bg_42{
+    background-color:#fcd682
+}
+
+.bg_44{
+    background-color:#fcd47b
+}
+
+.bg_46{
+    background-color:#fcd174
+}
+
+.bg_48{
+    background-color:#fdcf6e
+}
+
+.bg_50{
+    background-color:#fdcc67
+}
+
+.bg_52{
+    background-color:#fdca60
+}
+
+.bg_54{
+    background-color:#fec759
+}
+
+.bg_56{
+    background-color:#fec553
+}
+
+.bg_58{
+    background-color:#fec24c
+}
+
+.bg_60{
+    background-color:#ffc045
+}
+

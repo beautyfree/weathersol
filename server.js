@@ -26,16 +26,21 @@ app.param(['id','days','direction'], /^\d+$/);
 app.get('/widget/', function(req, res){
   var city_id = req.query.id || config.cities[0];
 
+  function render_widget(res, data) {
+      res.render('widget', {
+          weather: data,
+          days_type: req.query.days || 1,
+          direction_type: req.query.direction || 1
+      });
+  }
+
   /* Запрашиваем данные из бд */
   db.getCity(city_id, function(err, reply) {
 
     if(!err && reply) {
 
         // Отдаем пользователю
-        res.render('widget', {
-            weather: reply
-        });
-
+        render_widget(res, reply);
     } else {
 
         // Парсим если вдруг по какой то причине не нашли
@@ -44,9 +49,7 @@ app.get('/widget/', function(req, res){
                 // Сохраняем в бд
                 db.setCity(city_id, json);
                 // Отдаем пользователю
-                res.render('widget', {
-                    weather: json
-                });
+                render_widget(res, json);
             } else {
                 // Если есть ошибки нужно повторить процесс
                 res.send('Не существует виджета с такими параметрами');
