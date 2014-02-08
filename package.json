@@ -1,15 +1,32 @@
 {
-  "name": "Weather",
-  "description": "weather test app for exp",
-  "version": "0.0.1",
-  "private": false,
-  "dependencies": {
-    "express": "3.4.8",
-    "express-params": "*",
-    "request": "*",
-    "xml2js": "*",
-    "cron": "*",
-    "redis": "*",
-    "jade": "*"
-  }
+    "name": "Weather",
+    "description": "weather test app for exp",
+    "version": "0.0.1",
+    "private": false,
+    "engines": {
+        "node": "0.10.x"
+    },
+    "dependencies": {
+        "express": "3.4.8",
+        "express-params": "*",
+        "request": "*",
+        "xml2js": "*",
+        "cron": "*",
+        "redis": "*",
+        "jade": "*"
+    },
+    "main": "server.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/beautyfree/weather"
+    },
+    "keywords": [
+        "weather",
+        "redis"
+    ],
+    "author": "Alexey Elizarov (beauty_free)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/beautyfree/weather/issues"
+    }
 }

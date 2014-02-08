@@ -1,4 +1,26 @@
-extends ../layout
+extends ../layouts/app
 block content
-    h1 Users
-    #users
+    #sidebar
+        div
+            label(for='city_id') Город:
+            select#city_id(onchange='gen_script()')
+                option(value='27459', selected) Нижний Новгород
+                option(value='27612') Москва
+                option(value='26063') Санкт-Петербург
+        div
+            label(for='days_type') Сколько дней:
+            select#days_type(onchange='gen_script()')
+                option(value='1', selected) Сегодня
+                option(value='3') 3 дня
+                option(value='7') Неделя
+        div
+            label(for='direction_type') Направление блока:
+            select#direction_type(onchange='gen_script()')
+                option(value='1', selected) Горизонтальный
+                option(value='2') Вертикальный
+
+    #preview
+        #weather_widget
+
+        div
+            textarea#script_holder

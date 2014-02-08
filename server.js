@@ -22,29 +22,34 @@ app.get('/', function(req, res) {
     res.render('main');
 });
 
-/* Формируем ответ исходя из параметров запроса виджета*/
 app.param(['id','days','direction'], /^\d+$/);
-app.get('/city/:id/:days.js', function(req, res){
+app.get('/widget/', function(req, res){
+  var city_id = req.query.id || config.cities[0];
 
-  /* Запрашиваем данные из бд и парсим если данных по городу еще нет */
-  db.getCity(req.params.id, function(err, reply) {
+  /* Запрашиваем данные из бд */
+  db.getCity(city_id, function(err, reply) {
 
     if(!err && reply) {
 
         // Отдаем пользователю
-        res.send(JSON.parse(reply));
+        res.render('widget', {
+            weather: reply
+        });
 
     } else {
 
         // Парсим если вдруг по какой то причине не нашли
-        parser(req.params.id, function(err, json) {
+        parser(city_id, function(err, json) {
             if(!err) {
                 // Сохраняем в бд
-                db.setCity(req.params.id, JSON.stringify(json));
+                db.setCity(city_id, json);
                 // Отдаем пользователю
-                res.send(JSON.stringify(json));
+                res.render('widget', {
+                    weather: json
+                });
             } else {
                 // Если есть ошибки нужно повторить процесс
+                res.send('Не существует виджета с такими параметрами');
             }
         });
 
@@ -62,11 +67,12 @@ console.log('Listening on port 3000');
 
 function do_parse() {
     for(var k in config.cities) {
-        var cityId = config.cities[k];
-        parser(city_id, function(err, json) {
+        parser(config.cities[k], function(err, json, city_id) {
             if(!err) {
                 // Сохраняем в бд
-                db.setCity(city_id, JSON.stringify(json));
+                db.setCity(city_id, json);
+
+                // console.log('Спарсил данные для города: ' + city_id);
             } else {
                 // Если есть ошибки нужно повторить процесс
             }
@@ -77,11 +83,7 @@ function do_parse() {
 /* Парсим каждые 4 часа что бы были более менее свежие данные */
 new cron({
     cronTime: config.cron,
-    onTick: function() {
-        do_parse();
-    },
-    start: true
+    onTick: do_parse(),
+    start: true // При запуске стартуем и выполняем
 });
 
-/* Ручной парсинг при запуске сервера что бы иметь свежую бд */
-do_parse();

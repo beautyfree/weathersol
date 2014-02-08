@@ -1,0 +1,110 @@
+extends ../layouts/widget
+block content
+    script.
+        var weather_json = !{weather};
+
+    #wob_dp(style='padding-top: 7px; white-space: nowrap; transform: translate3d(0px, 0px, 0px); transition: -moz-transform 0ms ease-in-out 0s;')
+        .wob_df.wob_ds(wob_di='0', style='display: inline-block; line-height: 1; text-align: center; -moz-transition-duration: 200ms,200ms,200ms; -moz-transition-property: background-image,border,font-weight; font-weight: 13px; height: 90px; width: 61px;')
+            .vk_lgy(style='padding-top: 7px; line-height: 15px;') пт
+            div(style='display: inline-block;')
+                img(alt='Возможен снег', src='//ssl.gstatic.com/onebox/weather/48/snow_s_cloudy.png', style='margin: 1px 4px 0; height: 48px; width: 48px;')
+            div(style='font-weight: normal; line-height: 15px; font-size: 13px;')
+                .vk_gy(style='display: inline-block; padding-right: 5px;')
+                    span.wob_t(style='display: inline;') -1
+                    span.wob_t(style='display: none;') 30
+                    | °
+                .vk_lgy(style='display: inline-block;')
+                    span.wob_t(style='display: inline;') -5
+                    span.wob_t(style='display: none;') 23
+                    | °
+        .wob_df(wob_di='1', style='display: inline-block; line-height: 1; text-align: center; -moz-transition-duration: 200ms,200ms,200ms; -moz-transition-property: background-image,border,font-weight; font-weight: 13px; height: 90px; width: 61px;')
+            .vk_lgy(style='padding-top: 7px; line-height: 15px;') сб
+            div(style='display: inline-block;')
+                img(alt='Возможен снег', src='//ssl.gstatic.com/onebox/weather/48/snow_s_cloudy.png', style='margin: 1px 4px 0; height: 48px; width: 48px;')
+            div(style='font-weight: normal; line-height: 15px; font-size: 13px;')
+                .vk_gy(style='display: inline-block; padding-right: 5px;')
+                    span.wob_t(style='display: inline;') 3
+                    span.wob_t(style='display: none;') 37
+                    | °
+                .vk_lgy(style='display: inline-block;')
+                    span.wob_t(style='display: inline;') -2
+                    span.wob_t(style='display: none;') 28
+                    | °
+        .wob_df(wob_di='2', style='display: inline-block; line-height: 1; text-align: center; -moz-transition-duration: 200ms,200ms,200ms; -moz-transition-property: background-image,border,font-weight; font-weight: 13px; height: 90px; width: 61px;')
+            .vk_lgy(style='padding-top: 7px; line-height: 15px;') вс
+            div(style='display: inline-block;')
+                img(alt='Облачно', src='//ssl.gstatic.com/onebox/weather/48/partly_cloudy.png', style='margin: 1px 4px 0; height: 48px; width: 48px;')
+            div(style='font-weight: normal; line-height: 15px; font-size: 13px;')
+                .vk_gy(style='display: inline-block; padding-right: 5px;')
+                    span.wob_t(style='display: inline;') 5
+                    span.wob_t(style='display: none;') 41
+                    | °
+                .vk_lgy(style='display: inline-block;')
+                    span.wob_t(style='display: inline;') -3
+                    span.wob_t(style='display: none;') 27
+                    | °
+        .wob_df(wob_di='3', style='display: inline-block; line-height: 1; text-align: center; -moz-transition-duration: 200ms,200ms,200ms; -moz-transition-property: background-image,border,font-weight; font-weight: 13px; height: 90px; width: 61px;')
+            .vk_lgy(style='padding-top: 7px; line-height: 15px;') пн
+            div(style='display: inline-block;')
+                img(alt='Облачно с прояснениями', src='//ssl.gstatic.com/onebox/weather/48/cloudy.png', style='margin: 1px 4px 0; height: 48px; width: 48px;')
+            div(style='font-weight: normal; line-height: 15px; font-size: 13px;')
+                .vk_gy(style='display: inline-block; padding-right: 5px;')
+                    span.wob_t(style='display: inline;') 6
+                    span.wob_t(style='display: none;') 43
+                    | °
+                .vk_lgy(style='display: inline-block;')
+                    span.wob_t(style='display: inline;') -1
+                    span.wob_t(style='display: none;') 30
+                    | °
+        .wob_df(wob_di='4', style='display: inline-block; line-height: 1; text-align: center; -moz-transition-duration: 200ms,200ms,200ms; -moz-transition-property: background-image,border,font-weight; font-weight: 13px; height: 90px; width: 61px;')
+            .vk_lgy(style='padding-top: 7px; line-height: 15px;') вт
+            div(style='display: inline-block;')
+                img(alt='Возможен дождь', src='//ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png', style='margin: 1px 4px 0; height: 48px; width: 48px;')
+            div(style='font-weight: normal; line-height: 15px; font-size: 13px;')
+                .vk_gy(style='display: inline-block; padding-right: 5px;')
+                    span.wob_t(style='display: inline;') 6
+                    span.wob_t(style='display: none;') 43
+                    | °
+                .vk_lgy(style='display: inline-block;')
+                    span.wob_t(style='display: inline;') 0
+                    span.wob_t(style='display: none;') 32
+                    | °
+        .wob_df(wob_di='5', style='display: inline-block; line-height: 1; text-align: center; -moz-transition-duration: 200ms,200ms,200ms; -moz-transition-property: background-image,border,font-weight; font-weight: 13px; height: 90px; width: 61px;')
+            .vk_lgy(style='padding-top: 7px; line-height: 15px;') ср
+            div(style='display: inline-block;')
+                img(alt='Возможен дождь', src='//ssl.gstatic.com/onebox/weather/48/rain_s_cloudy.png', style='margin: 1px 4px 0; height: 48px; width: 48px;')
+            div(style='font-weight: normal; line-height: 15px; font-size: 13px;')
+                .vk_gy(style='display: inline-block; padding-right: 5px;')
+                    span.wob_t(style='display: inline;') 9
+                    span.wob_t(style='display: none;') 48
+                    | °
+                .vk_lgy(style='display: inline-block;')
+                    span.wob_t(style='display: inline;') 0
+                    span.wob_t(style='display: none;') 32
+                    | °
+        .wob_df(wob_di='6', style='display: inline-block; line-height: 1; text-align: center; -moz-transition-duration: 200ms,200ms,200ms; -moz-transition-property: background-image,border,font-weight; font-weight: 13px; height: 90px; width: 61px;')
+            .vk_lgy(style='padding-top: 7px; line-height: 15px;') чт
+            div(style='display: inline-block;')
+                img(alt='Возможен снег', src='//ssl.gstatic.com/onebox/weather/48/snow_s_cloudy.png', style='margin: 1px 4px 0; height: 48px; width: 48px;')
+            div(style='font-weight: normal; line-height: 15px; font-size: 13px;')
+                .vk_gy(style='display: inline-block; padding-right: 5px;')
+                    span.wob_t(style='display: inline;') 5
+                    span.wob_t(style='display: none;') 41
+                    | °
+                .vk_lgy(style='display: inline-block;')
+                    span.wob_t(style='display: inline;') -2
+                    span.wob_t(style='display: none;') 28
+                    | °
+        .wob_df(wob_di='7', style='display: inline-block; line-height: 1; text-align: center; -moz-transition-duration: 200ms,200ms,200ms; -moz-transition-property: background-image,border,font-weight; font-weight: 13px; height: 90px; width: 61px;')
+            .vk_lgy(style='padding-top: 7px; line-height: 15px;') пт
+            div(style='display: inline-block;')
+                img(alt='Облачно', src='//ssl.gstatic.com/onebox/weather/48/partly_cloudy.png', style='margin: 1px 4px 0; height: 48px; width: 48px;')
+            div(style='font-weight: normal; line-height: 15px; font-size: 13px;')
+                .vk_gy(style='display: inline-block; padding-right: 5px;')
+                    span.wob_t(style='display: inline;') 4
+                    span.wob_t(style='display: none;') 39
+                    | °
+                .vk_lgy(style='display: inline-block;')
+                    span.wob_t(style='display: inline;') -2
+                    span.wob_t(style='display: none;') 28
+                    | °
