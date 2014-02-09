@@ -10,9 +10,9 @@ block content
         div
             label(for='days_type') Сколько дней:
             select#days_type(onchange='gen_script()')
-                option(value='1', selected) Сегодня
+                option(value='1') Сегодня
                 option(value='3') 3 дня
-                option(value='7') Неделя
+                option(value='7', selected) Неделя
         div
             label(for='direction_type') Направление блока:
             select#direction_type(onchange='gen_script()')
